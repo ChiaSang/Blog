@@ -28,7 +28,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/master'
         with:
-          github_token: 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
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
           publish_dir: ./public
           commit_message: ${{ github.event.head_commit.message }}
